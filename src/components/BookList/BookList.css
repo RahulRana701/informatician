@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Updated alignment */
+  align-items: center;
+  /* Updated alignment */
   overflow: auto;
   margin-top: 2rem;
 }
@@ -23,22 +24,25 @@
   letter-spacing: 2px;
   font-family: "Times New Roman", Times, serif;
 }
+
 .smalltext {
   font-family: "Times New Roman", Times, serif;
   font-family: 20px;
   margin-bottom: 40px;
+  text-align: center;
 }
+
 form {
   width: 100%;
 }
 
 .searchbar {
-  display: flex;
+  display: block;
+  margin: auto;
   width: fit-content;
-  margin-left: 500px;
   align-items: center;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   margin-bottom: 10px;
   justify-content: center;
   border-radius: 10px;
@@ -49,12 +53,12 @@ form {
   font-size: 14px;
   color: #333;
   border-radius: 5px;
- 
+
   width: 300px;
 }
 
 #search-button-2 {
-  padding: 5px;
+  padding: 3px 3px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -103,7 +107,8 @@ form {
 }
 
 .show-links .hypertext-links {
-  max-height: 210px; /* Adjust the height as needed */
+  max-height: 210px;
+  /* Adjust the height as needed */
   transition: max-height 0.3s ease-in;
 }
 
@@ -130,6 +135,7 @@ form {
 
 .card-container {
   display: flex;
+  justify-content: center;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -148,15 +154,19 @@ form {
   padding: 20px;
   transition: 1s ease;
 }
+
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   transform: scale(1.1);
 }
+
 .card img {
-  width: 100px; /* Adjust the size as needed */
-  height: 100px; /* Adjust the size as needed */
+  width: 100px;
+  /* Adjust the size as needed */
+  height: 100px;
+  /* Adjust the size as needed */
   border-radius: 50%;
   object-fit: cover;
 }
@@ -198,6 +208,7 @@ form {
     padding: 6px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 874px) {
   .link {
     margin-left: 22px;
@@ -205,6 +216,7 @@ form {
     padding: 4px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .book-list-container {
     padding: 80px;
@@ -237,5 +249,30 @@ form {
 
   .card {
     flex: 0 0 350px;
+  }
+}
+
+@media screen and (max-width:445px) {
+  #search-button-2 {
+    padding: 0px;
+  }
+
+  .search-input {
+    width: fit-content;
+    padding: 4px 20px;
+  }
+
+  img,
+  video {
+    padding-top: 4px;
+    padding-right: 2px;
+    padding-left: 1px;
+  }
+}
+
+@media screen and (max-width:338px) {
+  .search-input {
+    width: fit-content;
+    padding: 4px 12px;
   }
 }
